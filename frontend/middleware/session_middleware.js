@@ -5,7 +5,7 @@ import { login } from '../util/session_api_util';
 import { logout } from '../util/session_api_util';
 import { signup } from '../util/session_api_util';
 
-const SessionMiddleware =({ getState, dispatch }) => next => action => {
+const SessionMiddleware = ({ getState, dispatch }) => next => action => {
   const successCallback = user => disptach(receiveCurrentUser(user));
   const errorCallback = xhr => dispatch(receiveErrors(xhr.responseJSON))
 

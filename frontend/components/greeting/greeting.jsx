@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const loggedIn = (currentUser, logout) => (
   <div>
@@ -10,12 +11,12 @@ const loggedIn = (currentUser, logout) => (
 const loggedOut = () => (
   <nav>
     <Link to="/signup">Sign up</Link>
+    <br></br>
     <Link to="/login">Log In</Link>
   </nav>
 );
 
 const Greeting = ({currentUser, logout}) => {
-  console.log(currentUser);
   if (currentUser) {
     return loggedIn(currentUser, logut);
   } else {
