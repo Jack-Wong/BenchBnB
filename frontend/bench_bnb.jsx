@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 
 import configureStore from './store/store';
 import Root from './components/root';
-// import { login } from './util/session_api_util';
+import {requestBenches} from './actions/bench_actions';
 
-// window.store = configureStore();
-// window.login = login;
+window.store = configureStore();
+
+window.requestBenches = requestBenches;
 
 document.addEventListener('DOMContentLoaded', () => {
   if (window.currentUser){
