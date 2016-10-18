@@ -18,7 +18,7 @@ const loggedOut = () => (
 
 const Greeting = ({currentUser, logout}) => {
   if (currentUser) {
-    return loggedIn(currentUser, logut);
+    return loggedIn(currentUser, logout);
   } else {
     return loggedOut();
   }

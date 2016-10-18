@@ -6,7 +6,7 @@ import { logout } from '../util/session_api_util';
 import { signup } from '../util/session_api_util';
 
 const SessionMiddleware = ({ getState, dispatch }) => next => action => {
-  const successCallback = user => disptach(receiveCurrentUser(user));
+  const successCallback = user => dispatch(receiveCurrentUser(user));
   const errorCallback = xhr => dispatch(receiveErrors(xhr.responseJSON))
 
   switch(action.type) {
