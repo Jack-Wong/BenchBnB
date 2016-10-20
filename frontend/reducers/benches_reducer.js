@@ -5,7 +5,7 @@ const BenchesReducer = (state = {}, action) => {
     case BenchConstants.RECEIVE_BENCHES:
       return action.benches;
     default:
-      return state}
+      return state
   }
 }
 
