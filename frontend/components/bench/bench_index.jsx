@@ -4,6 +4,10 @@ import { fetchBenches } from '../../util/bench_api_util';
 
 class BenchIndex extends React.Component {
 
+  componentDidMount(){
+    this.props.requestBenches()
+  }
+
   render() {
     let bench_list;
     if(this.props.benches){

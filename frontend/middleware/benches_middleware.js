@@ -6,7 +6,6 @@ import { fetchBenches } from '../util/bench_api_util';
 const BenchesMiddleware = ({getState, dispatch}) => next => action => {
   switch(action.type){
     case BenchConstants.REQUEST_BENCHES:
-    debugger
       const success = data => dispatch(receiveBenches(data));
       fetchBenches(success);
       return next(action)

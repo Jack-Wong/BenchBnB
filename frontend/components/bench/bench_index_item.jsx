@@ -7,18 +7,18 @@ class BenchIndexItem extends React.Component {
   };
 
   handleClick() {
-    hashHistory.push('benches/' + this.props.bench.id)
+    hashHistory.push('benches/' + this.props.benches.id)
   }
 
   render() {
-    const { bench } = this.props;
+    const { benches } = this.props;
     return(
       <li onClick={this.handleClick}>
-        <span>{bench.id}</span>
-        <img src={bench.picture_url} alt={bench.name}/>
-        <span>{bench.name}</span>
+        <span>{benches.id}</span>
+        <img src={benches.picture_url} alt={benches.name}/>
+        <span>{benches.name}</span>
         <span>Description: </span>
-        <span>{this.props.bench.description}</span>
+        <span>{this.props.benches.description}</span>
       </li>
     );
   };

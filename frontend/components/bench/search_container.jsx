@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import BenchIndex from './bench_index';
+import Search from './search';
 import { requestBenches } from '../../actions/bench_actions'
 
 const mapStateToProps = state => ({
@@ -10,9 +10,9 @@ const mapDispatchToProps = dispatch => ({
   requestBenches: () => dispatch(requestBenches())
 });
 
-const BenchIndexContainer = connect(
+const SearchContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(BenchIndex);
+)(Search);
 
-export default BenchIndexContainer;
+export default SearchContainer;
